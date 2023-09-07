@@ -37,8 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 message.textContent = "That was too low. Guess again!";
             } else {
-                message.textContent = "That was too high. Guess again!";
-            }}
+                message.textContent = "That was too high. Guess again!"; }
+               }   else  {
+                    message.textContent = "Please enter a valid number between between 1 and 10.";
+                    
+               
+            }
         });
     }
 });
