@@ -24,7 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // to check users guess and compare it with RND#
             if (guess === randomNumber) {
                 message.textContent = "Congratulations! You guessed it right!";
-                popup();
+                userNumber.value = "";
+                         setTimeout(() => {
+                         popup();
+                          }, 1500);
 
 
             } else if (guess < randomNumber) {
