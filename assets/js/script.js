@@ -19,7 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
            
             // get the users guess number
-                     let guess = parseInt(userNumber.value);
+              let guess = parseInt(userNumber.value);
+
+            // Check if the input is a valid number
+             if (!isNaN(guess) && guess >= 1 && guess <= 10) {
 
             // to check users guess and compare it with RND#
             if (guess === randomNumber) {
@@ -35,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 message.textContent = "That was too low. Guess again!";
             } else {
                 message.textContent = "That was too high. Guess again!";
-            }
+            }}
         });
     }
 });
