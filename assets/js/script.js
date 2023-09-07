@@ -40,10 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 message.textContent = "That was too high. Guess again!"; }
                }   else  {
                     message.textContent = "Please enter a valid number between between 1 and 10.";
-                    
-               
-            }
+               }
         });
+
+        // preventing decimal numbers in the input field...
+         //(source)https://stackoverflow.com/questions/7279047/how-to-prevent-user-from-entering-decimals
+         userNumber.addEventListener("input", function () {
+            this.value = Math.round(this.value);
+         });
     }
 });
     
