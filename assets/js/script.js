@@ -1,5 +1,5 @@
 // generate a random number between 1-100
-function genRandomNumber() {
+function genRandomNumber() {                                  //TODO: change back to 100
     let randomNumber = Math.floor((Math.random() * 10) + 1); //source: https://www.w3schools.com/jsref/jsref_random.asp
     return randomNumber;
 }
@@ -51,5 +51,12 @@ function popup() {
     }
 }
 
+// function to reset the game
+function resetGame() {
+    randomNumber = genRandomNumber();
+    document.getElementById('number').value = "";
+    document.getElementsByClassName("feedback-message")[0].textContent = "";
+    document.getElementById('number').disabled = false;
 
+}
 
