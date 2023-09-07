@@ -7,7 +7,7 @@ We decided to start the game with a version as easy as possible and had possible
 The basic steps for our project will be:
 
 1. user inputs a number between 1-100 in a field (using html to ensure only a number with a min value of 1 and a max value of 100 can be submitted)
-2. the number from the user is compared against randomly generated number (this happens in the background, the user doesn't see the randomly generated number)
+2. the user's number is compared against a randomly generated number (this happens in the background, the user doesn't see the randomly generated number)
 3. if the user inputs a number which is:
     - equal to the generated number: "Congratulations! [...]"
     - too high: "That was too high. Guess again!"
@@ -26,7 +26,7 @@ The game has a basic layout with some JS functions running in the background.
 ![Home page](docs/screenshots/homepage.png)
 The home page shows the title of the game on top.
 Below the title, there are very short and concise instructions on how the game is played.
-The main image is of fun question marks indicating the playful nature of the site.
+The main image shows fun question marks indicating the playful nature of the site.
 
 ### **Input Field**
 ![Input field](docs/screenshots/input-field.png)
@@ -51,3 +51,10 @@ Once the user has guessed correctly they can choose to play again. Alternatively
 Either option resets the game and the user can start from the beginning.
 
 ## **Testing**
+tested manually: on Chrome and Firefox browsers on desktop and mobile
+
+Lighthouse testing for ![mobile](docs/screenshots/mobile.lighthouse.png)
+
+Lighhouse testing for ![desktop](docs/screenshots/desk.lighthouse.png)
+
+
