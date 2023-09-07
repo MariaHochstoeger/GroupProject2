@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // to check users guess and compare it with RND#
             if (guess === randomNumber) {
-                message.textContent = "Congratulations! You guessed it right!";
+                message.textContent = "Congratulations! You guessed it right! The correct number was " + randomNumber;
                 userNumber.value = "";
                          setTimeout(() => {
                          popup();
@@ -36,10 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (guess < randomNumber) {
 
                 message.textContent = "That was too low. Guess again!";
+                userNumber.value = "";
             } else {
-                message.textContent = "That was too high. Guess again!"; }
-               }   else  {
+                message.textContent = "That was too high. Guess again!";
+                userNumber.value = "";}}
+              else {
                     message.textContent = "Please enter a valid number between between 1 and 10.";
+                    userNumber.value = "";
                }
         });
 
@@ -52,10 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
     
 
-
-
 // Function to show a play again popup
-
 function popup() {
     let playAgain = confirm("Congratulations! You guessed it right! Do you want to play again?");
     if (playAgain) {
