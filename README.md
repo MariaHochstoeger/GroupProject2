@@ -1,5 +1,7 @@
 # **Guess the number**
 
+![Mockup](docs/screenshots/mockup.png)
+
 ## **Planning**
 For our second group project we decided to do a simple JavaScript "Guess the number" game.
 We decided to start the game with a version as easy as possible and had possible upgrades in our mind if there is still time near the project deadline.
@@ -51,10 +53,30 @@ Once the user has guessed correctly they can choose to play again. Alternatively
 Either option resets the game and the user can start from the beginning.
 
 ## **Testing**
-tested manually: on Chrome and Firefox browsers on desktop and mobile
 
-Lighthouse testing for ![mobile](docs/screenshots/mobile.lighthouse.png)
+### Manual Testing 
+* The game was tested playing in different browsers: Chrome and Firefox on desktop and mobile.
+* The project is responsive, looks good and functions on all standard screen sizes.
 
-Lighhouse testing for ![desktop](docs/screenshots/desk.lighthouse.png)
+### Lighthouse report
+
+* for mobile![mobile](docs/screenshots/mobile.lighthouse.png)
+
+* for desktop![desktop](docs/screenshots/desk.lighthouse.png)
+
+### Validator Testing
+* HTML 
+  * No errors were returned when passing through the official W3C validator
+
+* CSS
+  * No errors were found when passing through the official (jigsaw) validator
+
+## Deployment
+The site was deployed to Github pages. The steps are as follows:
+In the GitHub repository, navigate to the Settings tab
+From the source destination drop-down menu, select the Master Branch
+Once the master branch has been selected, the page provided the link to the complete website.
+
+The live link can be found here: [Guess the Number](https://mariahochstoeger.github.io/GroupProject2/)
 
 
