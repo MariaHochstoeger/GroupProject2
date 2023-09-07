@@ -19,9 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
            
             // get the users guess number
-            let guess = parseInt(userNumber.value);
+                     let guess = parseInt(userNumber.value);
 
-            
             // to check users guess and compare it with RND#
             if (guess === randomNumber) {
                 message.textContent = "Congratulations! You guessed it right!";
@@ -37,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+    
+
 
 
 // Function to show a play again popup
@@ -54,9 +55,9 @@ function popup() {
 // function to reset the game
 function resetGame() {
     randomNumber = genRandomNumber();
-    document.getElementById('number').value = "";
+    userNumber.value = "";
     document.getElementsByClassName("feedback-message")[0].textContent = "";
     document.getElementById('number').disabled = false;
+    
 
 }
-
