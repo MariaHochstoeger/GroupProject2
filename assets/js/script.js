@@ -39,3 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Function to show a play again popup
+
+function popup() {
+    let playAgain = confirm("Congratulations! You guessed it right! Do you want to play again?");
+    if (playAgain) {
+        resetGame();
+    } else {
+        alert("Goodbye, see you soon!");
+        document.getElementById('number').disabled = true;
+    }
+}
+
+
+
