@@ -6,7 +6,7 @@ body {
 input#number {
     margin: 1rem 0;
     border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
+    box-shadow: inset 0 1px 3px #616060;
     border-radius: 4px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -24,7 +24,7 @@ input[type="submit"] {
     padding: 8px 25px;
     vertical-align: middle;
     cursor: pointer;
-    background-color: #04AA6D;
+    background-color: #005f3c;
     color: #ffffff;
     width: 100%;
 }
@@ -48,6 +48,29 @@ input[type="submit"] {
 
 .background-container img {
     width: 100%;
+}
+
+/* animate congratulation message */
+.expand-message {
+    animation-name: expand;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+        opacity: .5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: .7;
+    }
 }
 
 @media screen and (min-width:800px) {
