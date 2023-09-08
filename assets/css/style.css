@@ -51,14 +51,14 @@ input[type="submit"] {
 }
 
 /* animate congratulation message */
-.shrink-message {
-    animation-name: shrink;
+.expand-message {
+    animation-name: expand;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite; 
 }
 
-@keyframes shrink {
+@keyframes expand {
     0% {
         transform: scale(1);
         opacity: .5;
