@@ -32,6 +32,7 @@ The main image shows fun question marks indicating the playful nature of the sit
 
 ### **Input Field**
 ![Input field](docs/screenshots/input-field.png)
+
 Below the instructions on how to play the game there is an input field. This field receives the input from the user and is set to only accept integers between 1-100. Once the user is happy with their input, they click the "Guess" button.
 
 ### **Randomly Generated Number: randomNumber**
@@ -41,16 +42,18 @@ The moment the page is loaded, a random number between 1-100 is generated in the
 Once the user inputs a number into the input field and clicks the "Guess" button, JS takes the userNumber and compares it to the randomNumber.
 
 ### **Outcome Options**
+
 1. ![User guessed correctly](docs/screenshots/congratulations.png)
     If the userNumber matches the randomNumber exactly (i.e. the user guessed the correct number), an alert displays a success message. The user is also asked whether they would like to play again.
+
 2. ![User guessed too low](docs/screenshots/too-low.png)
     If the userNumber is lower than the randomNumber (i.e. the user guessed too low), a message below the main image tells the user that their guess was too low, and encourages the user to try again.
+
 3. ![User guessed too high](docs/screenshots/too-high.png)
     If the userNumber is higher than the randomNumber (i.e. the user guessed too high), a message below the main image tells the user that their guess was too high, and encourages the user to try again.
 
 ### **End of Game**
-Once the user has guessed correctly they can choose to play again. Alternatively, the user may reload the page.
-Either option resets the game and the user can start from the beginning.
+Once the user has guessed correctly they can choose to play again. Alternatively, the user may reload the page. Either option resets the game and the user can start from the beginning.
 
 ## **Testing**
 
@@ -66,13 +69,16 @@ Either option resets the game and the user can start from the beginning.
 
 ### Validator Testing
 * HTML 
-  * No errors were returned when passing through the official W3C validator
-
 * CSS
-  * No errors were found when passing through the official (jigsaw) validator
+* JS
+  - No errors were returned when passing through the official js 
+ [extendsclass](https://extendsclass.com/javascript-fiddle.html
+) validator
 
+![](docs/screenshots/vali-js.png)
 ## Deployment
 The site was deployed to Github pages. The steps are as follows:
+
 In the GitHub repository, navigate to the Settings tab
 From the source destination drop-down menu, select the Master Branch
 Once the master branch has been selected, the page provided the link to the complete website.
