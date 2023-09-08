@@ -50,11 +50,27 @@ input[type="submit"] {
     width: 100%;
 }
 
+/* animate congratulation message */
 .shrink-message {
     animation-name: shrink;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite; 
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+        opacity: .5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: .7;
+    }
 }
 
 @media screen and (min-width:800px) {
