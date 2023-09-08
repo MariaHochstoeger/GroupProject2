@@ -1,3 +1,4 @@
+    //game global varibles
     let userNumber = document.getElementById('number');
     let message = document.getElementsByClassName("feedback-message")[0];
     let button = document.querySelector('input[value="Guess"]');
@@ -5,7 +6,7 @@
 
     // generate a random number between 1-100
     function genRandomNumber() { //TODO: change back to 100
-        let randomNumber = Math.floor((Math.random() * 10) + 1); //source: https://www.w3schools.com/jsref/jsref_random.asp
+        let randomNumber = Math.floor((Math.random() * 100) + 1); //source: https://www.w3schools.com/jsref/jsref_random.asp
         return randomNumber;
     }
 
@@ -20,15 +21,15 @@
                 let guess = parseInt(userNumber.value);
 
                 // Check if the input is a valid number
-                if (!isNaN(guess) && guess >= 1 && guess <= 10) {
+                if (!isNaN(guess) && guess >= 1 && guess <= 100) {
 
                     // to check users guess and compare it with RND#
                     if (guess === randomNumber) {
-                        message.classList.add('expand-message'); // Apply the expand effect for congratulat message
+                        message.classList.add('expand-message'); // Apply the expand effect for congratulat message -- https://speckyboy.com/css-javascript-text-animation-snippets
                         message.textContent = "Congratulations! You guessed it right! The correct number was " + randomNumber;
                         userNumber.value = "";
 
-                        setTimeout(() => {
+                        setTimeout(function() {
                             message.classList.remove('expand-message'); // Remove the expand effect class
                             popup();
                         }, 1500);
@@ -42,7 +43,7 @@
                         userNumber.value = "";
                     }
                 } else {
-                    message.textContent = "Please enter a valid number between between 1 and 10.";
+                    message.textContent = "Please enter a valid number between between 1 and 100.";
                     userNumber.value = "";
                 }
             });
