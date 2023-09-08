@@ -50,6 +50,13 @@ input[type="submit"] {
     width: 100%;
 }
 
+.shrink-message {
+    animation-name: shrink;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite; 
+}
+
 @media screen and (min-width:800px) {
     input[type="submit"], input#number {
         width: auto;
