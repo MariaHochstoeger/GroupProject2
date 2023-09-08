@@ -19,28 +19,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
            
             // get the users guess number
-            let guess = parseInt(userNumber.value);
+              let guess = parseInt(userNumber.value);
 
-            
+            // Check if the input is a valid number
+             if (!isNaN(guess) && guess >= 1 && guess <= 10) {
+
             // to check users guess and compare it with RND#
             if (guess === randomNumber) {
-                message.textContent = "Congratulations! You guessed it right!";
-                popup();
+                message.textContent = "Congratulations! You guessed it right! The correct number was " + randomNumber;
+                userNumber.value = "";
+                         setTimeout(() => {
+                         popup();
+                          }, 1500);
 
 
             } else if (guess < randomNumber) {
 
                 message.textContent = "That was too low. Guess again!";
+                userNumber.value = "";
             } else {
                 message.textContent = "That was too high. Guess again!";
-            }
+                userNumber.value = "";}}
+              else {
+                    message.textContent = "Please enter a valid number between between 1 and 10.";
+                    userNumber.value = "";
+               }
         });
+
+        // preventing decimal numbers in the input field...
+         //(source)https://stackoverflow.com/questions/7279047/how-to-prevent-user-from-entering-decimals
+         userNumber.addEventListener("input", function () {
+            this.value = Math.round(this.value);
+         });
     }
 });
-
+    
 
 // Function to show a play again popup
-
 function popup() {
     let playAgain = confirm("Congratulations! You guessed it right! Do you want to play again?");
     if (playAgain) {
@@ -54,9 +69,9 @@ function popup() {
 // function to reset the game
 function resetGame() {
     randomNumber = genRandomNumber();
-    document.getElementById('number').value = "";
+    userNumber.value = "";
     document.getElementsByClassName("feedback-message")[0].textContent = "";
     document.getElementById('number').disabled = false;
+    
 
 }
-
