@@ -1,3 +1,4 @@
+    //game global varibles
     let userNumber = document.getElementById('number');
     let message = document.getElementsByClassName("feedback-message")[0];
     let button = document.querySelector('input[value="Guess"]');
@@ -24,11 +25,11 @@
 
                     // to check users guess and compare it with RND#
                     if (guess === randomNumber) {
-                        message.classList.add('expand-message'); // Apply the expand effect for congratulat message
+                        message.classList.add('expand-message'); // Apply the expand effect for congratulat message -- https://speckyboy.com/css-javascript-text-animation-snippets
                         message.textContent = "Congratulations! You guessed it right! The correct number was " + randomNumber;
                         userNumber.value = "";
 
-                        setTimeout(() => {
+                        setTimeout(function() {
                             message.classList.remove('expand-message'); // Remove the expand effect class
                             popup();
                         }, 1500);

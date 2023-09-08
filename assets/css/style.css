@@ -53,11 +53,12 @@ input[type="submit"] {
 /* animate congratulation message */
 .expand-message {
     animation-name: expand;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite; 
 }
 
+/* https://freefrontend.com/css-text-animations */
 @keyframes expand {
     0% {
         transform: scale(1);
@@ -72,6 +73,7 @@ input[type="submit"] {
         opacity: .7;
     }
 }
+
 
 @media screen and (min-width:800px) {
     input[type="submit"], input#number {
